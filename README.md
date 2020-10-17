@@ -43,7 +43,7 @@ What is *Pain_long*? (2 points)
 ## write down your answer after "## ---| in the next line". Provide code as you will
 ## ----|
 
-
+Pain_long is a new object that is created from extracting the "pain" from the previously created object "data". 
 ```
 # Question 3 (2 points)
 
@@ -54,6 +54,13 @@ Conduct some operation on *Pain_long*. In other words, provide any function usin
 
 ## write down your answer after "## ---|" in the next line. Provide code as you will
 ## ----|
+
+summary (Pain_long)
+table (Pain_long)
+
+Here we are able to see summary statistics of the data set called Pain_long. Using the "summary" function we are able to get descriptive statistics such as median, q1, and q2, etc. And in the table format, we're able to get the frequencies of all the values of 0-4. 
+
+
 ```
 # Bonus 
 
@@ -64,4 +71,11 @@ Share something with me about what you learned by yourself **beyond** what we ha
 
 ## write down what is the above command(s) about
 ## ----|
+
+getmode <- function(Pain_long) {
+  uniq <- unique(Pain_long)
+  uniq[which.max(tabulate(match(Pain_long, uniq)))]
+}
+result <- getmode(Pain_long)
+print(result)
 ```
