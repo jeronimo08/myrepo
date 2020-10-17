@@ -71,6 +71,7 @@ Share something with me about what you learned by yourself **beyond** what we ha
 
 ## write down what is the above command(s) about
 ## ----|
+Since mode is not a pre-determined function in R, I had to create the function and then apply it to the previously constructed object "Pain_long": 
 
 getmode <- function(Pain_long) {
   uniq <- unique(Pain_long)
