@@ -25,8 +25,9 @@ then there is an object created in my environment. Can you guess what I am doing
 ```{r}
 ## write down your answer after "## ---|" in the next line. Provide code as you will
 ## ----| 
- Read.csv instructs R to read the comma seperated values (.csv) file, which is in table form from the website: 
-http://courses.washington.edu/b517.Datasets/shoulder.csv in to the object "data". 
+
+Read.csv instructs R to read the comma seperated values (.csv) file, which is in table form from the website: 
+http://courses.washington.edu/b517.Datasets/shoulder.csv in to newly-created object named "data". 
 
 ```
 # Question 2 (2 points)
@@ -43,7 +44,7 @@ What is *Pain_long*? (2 points)
 ## write down your answer after "## ---| in the next line". Provide code as you will
 ## ----|
 
-Pain_long is a new object that is created from extracting the "pain" from the previously created object "data". 
+Pain_long is a new object that is created by extracting "pain" from the previously created object "data". 
 ```
 # Question 3 (2 points)
 
@@ -71,7 +72,7 @@ Share something with me about what you learned by yourself **beyond** what we ha
 
 ## write down what is the above command(s) about
 ## ----|
-Since mode is not a pre-determined function in R, I had to create the function and then apply it to the previously constructed object "Pain_long": 
+Since mode is not a pre-determined function in R, I had to create the function and then apply it to the previously constructed object "Pain_long" in order to get the most common answer for Pain_long, which is "0": 
 
 getmode <- function(Pain_long) {
   uniq <- unique(Pain_long)
